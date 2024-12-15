@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vmin;
+    color: rgb(234, 234, 234);
+    text-shadow: 0px 0px 10px 1px black;
+  }
+ 
+  h1 {
+   font-family: 'Irish Grover', cursive;
+   text-shadow: 0px 0px 1vw black;
+  }
+ 
+  .head {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    height: 4rem;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    background: rgb(57, 65, 102);
+    backdrop-filter: blur(1.5);
+    border: 2px solid rgb(194, 141, 157);
+    border-top: none;
+    box-shadow: 0px 0px 100px 8px #686868;
+    padding: 10px;
+    animation: headIn 1.35s ease-in;
+  }
+ 
+  @keyframes headIn {
+    from {transform: translateY(-60px);}
+  }
+ 
+  html {
+    background: black;
+  }
+ 
+  body {
+    background: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    animation: bodyIn 1s ease-in-out;
+    background-position: center center;
+  }
+ 
+  @keyframes bodyIn {
+    from {opacity: 0;}
+  }
+ 
+ .nav {
+    width: 100%;
+    height: 100%;
+ }
+ 
+  .nav > nav {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+  }
+ 
+  @keyframes title {
+    33% { color: red; text-shadow: 0 0 1vw blue; }
+    66% { color: green; text-shadow: 0 0 1vw white; }
+    99% { color: blue; text-shadow: 0 0 1vw red; }
+    100% { color: white; text-shadow: 0 0 1vw green; }
+ }
+ 
+  .nav > nav > .title {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    cursor: default;
+  }
+ 
+  .nav > nav > .title:hover h1 {
+    animation: title 3s linear infinite;
+  }
+ 
+  .nav > nav > .title > h1 {
+    margin-left: 20px;
+    font-family: 'Irish Grover', cursive;
+  }
+ 
+  .nav > nav > ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 13px;
+    justify-content: space-around;
+  }
+ 
+  .nav > nav > ul > li {
+    transition: 500ms ease-in-out;
+  }
+ 
+  .nav > nav > ul > li:hover {
+    scale: 1.2;
+    text-shadow: 0 0 1vw currentColor;
+  }
+ 
+  .nav > nav > ul > li > a {
+    font-family: 'Indie Flower', cursive;
+    transition: 500ms ease-in-out;
+  }
+ 
+  .nav > nav > ul > li > a:hover {
+    font-family: 'Indie Flower', cursive;
+    color: rgb(214, 167, 188);
+    text-shadow: 0 0 1vw currentColor;
+  }
+ 
+  .container {
+     width: 100%;
+     height: 100vh;
+  }
+ 
+  .container > .button-container {
+    width: 100%;
+    height: 92vh;
+    justify-items: center;
+    align-content: center;
+  }
+ 
+  .container > .button-container > .button {
+    background: rgba(252, 240, 244, 0.3);
+    border: 5px solid rgba(67, 54, 89, 0.8);
+    box-shadow: 0px 0px 100px 10px rgb(47, 84, 130);
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100px;
+    justify-items: center;
+    align-content: center;
+    cursor: pointer;
+    transition: 500ms;
+  }
+ 
+  .container > .button-container > .button:hover {
+     scale: 1.1;
+     background: rgba(252, 240, 244, 0.5);
+     border: 5px solid rgba(67, 54, 89, 1);
+     box-shadow: 0px 0px 100px 10px black;
+  }
+ 
+  .container > .button-container > #open {
+    background: rgba(252, 240, 244, 0.1);
+    box-shadow: 0px 0px 100px 10px black;
+    border: none;
+    width: 50rem;
+    height: 30rem;
+    justify-items: center;
+    align-content: center;
+    cursor: default;
+    transition: 500ms;
+    border-radius: 10px;
+    backdrop-filter: blur(5.5px);
+    padding: 10px;
+  }
+ 
+  .container > .button-container > #open:hover {
+    scale: 1;
+    box-shadow: 0px 0px 50px 1px rgb(47, 84, 130);
+  }
+ 
+  #close {
+    box-shadow: 0px 0px 20px 1px black;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100px;
+    justify-items: center;
+    align-content: center;
+    transition: 500ms;
+    cursor: pointer;
+    opacity: 100%;
+  }
+ 
+  #close > p {
+    animation: closep 3s infinite;
+    color: white;
+    text-shadow: 0 0 1vw black;
+  }
+ 
+  #close:hover {
+    scale: 1.15;
+  }
+ 
+  #closed {
+    display: none;
+    transition: 500ms;
+  }
+ 
+  #opened {
+    transition: 500ms;
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-items: space-around;
+    align-content: center;
+  }
+ 
+  .box1,
+  .box3
+  {
+    width: 100%;
+    height: 11.9rem;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .content,
+  .content1,
+  .content2,
+  .content3 {
+   border: 2px solid rgb(135, 157, 255);
+   width: 100%;
+   height: 100%;
+   padding: 10px;
+   justify-items: center;
+   align-content: center;
+   border-radius: 25px;
+   box-shadow: 0 0 60px 1px rgba(0, 0, 0, 1)inset;
+   margin: 10px;
+   cursor: pointer;
+   transition: 500ms;
+   animation: contentIn 2s ease-in-out;
+  }
+  
+  .content,
+  .content3 {
+   background: rgba(194, 141, 157, 1);
+  }
+ 
+  .content1,
+  .content2 {
+   background: rgba(57, 65, 102, 1);
+  }
+ 
+  @keyframes contentIn {
+   from { opacity: 0; }
+  }
+  
+  .content:hover,
+  .content1:hover,
+  .content2:hover,
+  .content3:hover {
+   scale: 1.05;
+  }
+ 
+  .box2 {
+    width: 100%;
+    height: 5rem;
+    padding: 10px;
+    justify-items: center;
+    align-content: center;
+  }
+ 
+  .box2 > .button-close {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 1)inset;
+    border-radius: 100px;
+    background: rgba(57, 65, 102, 1);
+    justify-items: center;
+    align-items: center;
+    border: 2px solid rgb(135, 157, 255);
+    animation: button-closeIn 1.5s ease-in-out;
+  }
+ 
+  @keyframes button-closeIn {
+    from { width: 0; }
+  }
+ 
+  .box2 > .button-close > .button2 {
+    width: 10%;
+    height: 100%;
+    border-radius: 100%;
+    scale: 1.5;
+    border: 2px solid rgb(135, 157, 255);
+    background: rgba(194, 141, 157, 1);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 1)inset;
+    cursor: pointer;
+    transition: 500ms;
+    justify-items: center;
+    align-content: center;
+  }
+ 
+  .box2 > .button-close > .button2:hover {
+    scale: 1.6;
+  }
+ 
+  .spin1, .spin2 {
+    border-radius: 100%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgba(57, 65, 102, 1);
+    margin: 10px;
+    box-shadow: 0 0 10px 1px black;
+  }
+  
+  .spin {
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-content: center;
+    animation: spin 8s linear infinite;
+  }
+ 
+  @keyframes spin {
+    from {
+       transform: rotate(360deg);
+    }
+ 
+    to {
+       transform: rotate(-360deg);
+    }
+  }

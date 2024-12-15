@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>[] o []</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="script.js"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+ </head>
+
+ <body>
+
+    <div class="container">
+
+        <header class="head">
+
+            <div class="nav">
+                <nav>
+                    <div class="title">
+                        <h1>Portfolio</h1>
+                    </div>
+    
+                    <ul>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+        </header>
+
+        <div class="button-container">
+            <div class="button" onclick="expand()">
+                <p id="remove">[] o []</p>
+                <div id="closed">
+                    <div class="box1">
+                        <div class="content">
+                            <h1 style="font-family: 'Irish Grover', cursive;">About</h1>
+                        </div>
+                        <div class="content1">
+                            <h1 style="font-family: 'Irish Grover', cursive;">Services</h1>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <div class="button-close" onclick="revert()">
+                            <div class="button2">
+                                <div class="spin">
+                                <div class="spin1"></div>
+                                <div class="spin2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box3">
+                        <div class="content2">
+                            <h1 style="font-family: 'Irish Grover', cursive;">Contacts</h1>
+                        </div>
+                        <div class="content3">
+                            <h1 style="font-family: 'Irish Grover', cursive;">Etc</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+ <script>
+
+ function expand() {
+    document.querySelector(".button").id = "open" ;
+    document.getElementById("remove").innerHTML = "" 
+    document.getElementById("closed").id = "opened" ;
+ }
+
+ </script>
+
+ </body>
+
+</html>
